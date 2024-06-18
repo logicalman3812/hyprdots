@@ -1,0 +1,119 @@
+
+// Config //
+configuration {
+    modi:                        "drun";
+    show-icons:                  false;
+    font:                        "SF Pro Text 14";
+}
+
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+
+// Main //
+window {
+    width:                       25em;
+    height:                      25em;
+    transparency:                "real";
+    fullscreen:                  false;
+    enabled:                     true;
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border-color:                @foreground;
+    background-color:            @background;
+    border-radius:               25px;
+    scrollbar-width:             0px; 
+}
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0.5em;
+    orientation:                 vertical;
+    children:                    [ "listview" ];
+    background-color:            transparent;
+}
+wallbox {
+    spacing:                     0em;
+    padding:                     0em;
+    expand:                      false;
+    orientation:                 horizontal;
+    background-color:            transparent;
+    background-image:            url("~/.cache/swww/eDP-1", width);
+    children:                    [ "wallframe" , "inputbar" ];
+}
+wallframe {
+    width:                       5em;
+    spacing:                     0em;
+    padding:                     0em;
+    expand:                      false;
+    background-color:            @background;
+    background-image:            url("~/.cache/hyde/wall.quad", width);
+}
+
+
+// Inputs //
+inputbar {
+    enabled:                     false;
+    padding:                     0em;
+    children:                    [ "entry" ];
+    background-color:            @background;
+    expand:                      true;
+}
+entry {
+    enabled:                     false;
+    padding:                     1.8em;
+    text-color:                  @normal-foreground;
+    background-color:            transparent;
+}
+
+
+// Lists //
+listbox {
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 vertical;
+    children:                    [ "dummy" , "listview" , "dummy" ];
+    background-color:            transparent;
+}
+listview {
+    enabled:                     true;
+    padding:                     0.5em;
+    columns:                     1;
+    lines:                       11; 
+    cycle:                       true;
+    fixed-height:                true;
+    fixed-columns:               false;
+    expand:                      false;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  white;
+}
+dummy {
+    spacing:                     0em;
+    padding:                     0em;
+    background-color:            transparent;
+}
+
+
+// Elements //
+element {
+    enabled:                     true;
+    padding:                     0.5em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  white;
+}
+element selected.normal {
+    background-color:            @foreground;
+    text-color:                  @select;
+    border-radius:               15px; 
+}
+element-text {
+    vertical-align:              0.0;
+    horizontal-align:            0.0;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+

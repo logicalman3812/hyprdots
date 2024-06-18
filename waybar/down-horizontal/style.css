@@ -1,0 +1,134 @@
+@import url("/home/jake/.cache/wal/colors-waybar.css");
+
+* {
+  /* font-family: Cantarell Nerd Font; */
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 11pt;
+}
+
+window#waybar {
+  color: @foreground;
+  /* foreground */
+  background-color: @background;
+  /* background */
+  border-radius: 12px 12px 12px 12px;
+  border-width: 1px;
+  border-bottom: 1px;
+  border-top: 1px;
+  border-style: solid;
+  border-color: @color1;
+  /* color1 */
+}
+
+tooltip label {
+  color: @foreground;
+  /* foreground */
+  text-shadow: none;
+}
+
+tooltip {
+  background: @background;
+  /* background */
+  border-radius: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @color1;
+  /* color1 */
+}
+
+#workspaces {
+  padding: 4px 0px;
+  padding-right: 0px;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+#workspaces button {
+  color: @foreground;
+  /* foreground */
+  border: none;
+}
+
+#workspaces button:hover {
+  background: @color1;
+  /* color1 */
+  border-radius: 8px;
+}
+
+#clock,
+#custom-polycat,
+#custom-weather,
+#power-profiles-daemon,
+#mpris,
+#idle_inhibitor {
+  margin-top: 0px;
+  padding-right: 0px;
+}
+
+#pulseaudio {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#battery {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#memory {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#bluetooth {
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+#custom-dark-switcher {
+  margin-top: 0px;
+  padding-right: 0px;
+}
+
+#custom-spotify {
+  margin-top: 2px;
+}
+
+#tray {
+  margin-right: 20px;
+  margin-left: 0px;
+}
+
+#network {
+  margin-top: 0px;
+  padding-right: 0px;
+  margin-left: -22px;
+  margin-right: -30px;
+  min-width: 100px;
+}
+
+#language {
+  margin-right: 0px;
+  margin-top: -2px;
+}
+
+#custom-polycat {
+  font-size: 24px;
+  margin-bottom: 2px;
+  margin-right: 1px;
+}
+
+#battery.charging {
+  color: @color6;
+  /* color6 */
+}
+
+#battery.warning:not(.charging) {
+  color: @color11;
+  /* color11 */
+}
+
+#battery.critical:not(.charging) {
+  color: @color14;
+  /* color14 */
+}

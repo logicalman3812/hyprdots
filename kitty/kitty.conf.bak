@@ -1,0 +1,13 @@
+# BEGIN_KITTY_THEME
+# Adwaita light
+include current-theme.conf
+# END_KITTY_THEME
+
+font_size 10.0
+window_padding_width 4 6
+
+tab_bar_margin_height 4.0 0.0
+tab_bar_margin_width 4.0
+tab_bar_align center
+
+enable_audio_bell no

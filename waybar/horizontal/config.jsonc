@@ -1,0 +1,198 @@
+{
+	"position": "top",
+	"height": 0,
+	"spacing": 0,
+	"width": 1500,
+	"reload_style_on_change": true,
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"margin-top": 10,
+	"modules-left": [
+		"hyprland/workspaces",
+		// "mpris",
+		"custom/spotify"
+	],
+	"modules-center": ["clock"],
+	"modules-right": [
+		// "custom/polycat",
+		"hyprland/language",
+		"custom/separator",
+		"group/network",
+		"pulseaudio",
+		"memory",
+		// "group/power",
+		"battery",
+		"custom/separator",
+		"tray"
+	],
+	"tray": {
+		"icon-size": 15,
+		"spacing": 10
+	},
+	"group/network": {
+		"orientation": "inherit",
+		// "drawer": {
+		// 	"transition-duration": 300,
+		// 	"children-class": "network-drawer-child",
+		// 	"transition-left-to-right": false
+		// },
+		"modules": ["network", "bluetooth"]
+	},
+	"memory": {
+		"interval": 30,
+		// "format": "<span size='large' rise='-2000'>󰍛  </span>{}%",
+		"format": "  {}%",
+		"max-length": 10
+	},
+	// "group/power": {
+	// 	"orientation": "inherit",
+	// 	"drawer": {
+	//     	"transition-duration": 300,
+	//     	"children-class": "power-drawer-child",
+	//     	"transition-left-to-right": false
+	// 	},
+	// 	"modules": [
+	// 		"battery",
+	// 		"idle_inhibitor",
+	// 		"power-profiles-daemon",
+	// 		"custom/dark-switcher"
+	// 	]
+	// },
+	// Modules configuration
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": "\ueb8a",
+			"sort-by-number": true
+		}
+	},
+	"pulseaudio": {
+		"format": "{icon}    {volume}%",
+		"rotate": 0,
+		"format-muted": "<span size='large' rise='-1500'>󰖁 </span>",
+		"on-click": "pavucontrol -t 3",
+		"on-click-middle": "/home/jake/.config/ricing/volumecontrol.sh -o m",
+		"on-scroll-up": "/home/jake/.config/ricing/volumecontrol.sh -o i",
+		"on-scroll-down": "/home/jake/.config/ricing/volumecontrol.sh -o d",
+		"tooltip-format": "{icon}  {desc} // {volume}%",
+		"ignored-sinks": ["Easy Effects Sink"],
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		}
+	},
+	"custom/separator": {
+		"format": " | "
+	},
+	"custom/dark-switcher": {
+		"interval": "once",
+		"signal": 8,
+		"return-type": "text",
+		"exec": "~/.bin/toggle_dark_front.sh",
+		"on-click": "~/.bin/toggle_dark.sh",
+		"tooltip": false
+	},
+	"custom/polycat": {
+		"exec": "/sbin/polycat",
+		"tooltip": false
+	},
+	"clock": {
+		"format": "{:%I:%M %p}",
+		"format-alt": "{:%a %d, %I:%M %p}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}  {capacity}%",
+		"format-alt": "{icon} {time}",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "<span size='large' rise='-1500'>󱧦</span>  {capacity}%",
+		"format-full": "",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+	"network": {
+		"format": "󰤭",
+		"format-wifi": "<span size='large' rise='-1500'>{icon}</span>",
+		"format-ethernet": "    ",
+		"format-disconnected": "󰤭",
+		"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+		"tooltip-format": "󰤭",
+		"tooltip-format-ethernet": "{ifname}",
+		"tooltip-format-disconnected": "󰤭",
+		"on-click": "nm-applet",
+		"max-length": 10
+	},
+	"custom/spotify": {
+		"exec": "/home/jake/.config/waybar/modules/mediaplayer.py --player spotify",
+		"format": " {}",
+		"rotate": 0,
+		"return-type": "json",
+		"on-click": "playerctl previous --player spotify",
+		"on-click-right": "playerctl next --player spotify",
+		"on-click-middle": "playerctl play-pause --player spotify",
+		"on-scroll-up": "volumecontrol.sh -p spotify i",
+		"on-scroll-down": "volumecontrol.sh -p spotify d",
+		"max-length": 50,
+		"escape": true,
+		"tooltip": true
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"mpris": {
+		"format": "󰏤   {dynamic}",
+		"format-paused": "󰐊   {dynamic}",
+		"format-stopped": " ",
+		"tooltip-format": "{dynamic}",
+		"dynamic-separator": "  -  ",
+		"dynamic-order": ["title", "artist", "album"],
+		"dynamic-len": 40
+	},
+
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "us",
+		"format-ru": "ru"
+	},
+	"bluetooth": {
+		"format": "<span size='large' rise='-1500'>󰂯</span>",
+		"format-off": "󰂲",
+		"format-disabled": " ",
+		"format-connected": "󰂯",
+		"format-connected-battery": "<span size='large' rise='-1500'>󰂯</span>  {device_battery_percentage}%",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+		"on-click": "blueman-manager"
+	},
+	"power-profiles-daemon": {
+		"format": "{icon}",
+		"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+		"tooltip": true,
+		"format-icons": {
+			"default": "",
+			"performance": "",
+			"balanced": "",
+			"power-saver": ""
+		}
+	}
+}
