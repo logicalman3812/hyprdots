@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5c19f97 (improved config files)
 // Config //
 configuration {
     modi:                        "drun";

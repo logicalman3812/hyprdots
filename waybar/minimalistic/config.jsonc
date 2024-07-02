@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "layer": "top",
   "width": 1500,
   "margin-top": 10,
@@ -213,4 +214,236 @@
     "interval": 15,
     "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' ",
   },
+=======
+	"layer": "top",
+	"width": 1500,
+	"margin-top": 10,
+	"margin-bottom": 0,
+	"gtk-layer-shell": true,
+	"reload_style_on_change": true,
+
+	// Modules layout
+
+	"modules-left": ["hyprland/workspaces", "custom/spotify"],
+	"modules-center": ["clock"],
+	"modules-right": [
+		"hyprland/language",
+		"memory",
+		"pulseaudio",
+		"bluetooth",
+		"battery",
+		"tray"
+	],
+
+	// workspaces
+
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"urgent": "<span font='12'></span>",
+			"active": "<span font='12'>󰮯</span>",
+			"default": "<span font='12'>󰊠</span>",
+			"sort-by-number": true
+		}
+	},
+
+	// spotify
+
+	"custom/spotify": {
+		"exec": "python $HOME/.config/waybar/modules/mediaplayer.py --player spotify",
+		"format": " {}",
+		"rotate": 0,
+		"return-type": "json",
+		"on-click": "playerctl previous --player spotify",
+		"on-click-right": "playerctl next --player spotify",
+		"on-click-middle": "playerctl play-pause --player spotify",
+		"on-scroll-up": "volumecontrol.sh -p spotify i",
+		"on-scroll-down": "volumecontrol.sh -p spotify d",
+		"max-length": 50,
+		"escape": true,
+		"tooltip-format": " {}"
+	},
+
+	// clock
+
+	"clock": {
+		"tooltip": true,
+		"interval": 60,
+		"format": "<span font='12'>󱑆</span>  {:%I:%M %p}",
+		"format-alt": "<span font='12'>󰃭</span>  {:%a %d, <span font='12'>󱑆</span>  %I:%M %p}",
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "month",
+			"on-scroll": 1,
+			"format": {
+				"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		}
+	},
+
+	// language
+
+	"hyprland/language": {
+		"format": "<span font='12'>󰌌</span>  {}",
+		"format-en": "English",
+		"format-ru": "Russian"
+	},
+
+	// memory
+
+	"memory": {
+		"interval": 15,
+		"format": "<span></span>  {used}GiB",
+		"max-length": 13,
+		"tooltip-format": "󰍛  {used}GiB"
+	},
+
+	// pulseaudio
+
+	"pulseaudio": {
+		"format": "{icon}    {volume}%",
+		"rotate": 0,
+		"format-muted": "<span size='large' rise='-1000'>󰖁 </span>",
+		"on-click": "pavucontrol -t 3",
+		"on-click-middle": "$HOME/.config/ricing/volumecontrol.sh -o m",
+		"on-scroll-up": "$HOME/.config/ricing/volumecontrol.sh -o i",
+		"on-scroll-down": "$HOME/.config/ricing/volumecontrol.sh -o d",
+		"tooltip-format": "{icon}   {desc} || {volume}%",
+		"ignored-sinks": ["Easy Effects Sink"],
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", " "]
+		}
+	},
+
+	// bluetooth
+
+	"bluetooth": {
+		"format": "<span font='13'>󰂯</span>",
+		"format-off": "<span font='13'>󰂲</span>",
+		"format-disabled": "<span font='13'>󰂲</span>",
+		"format-connected": "<span size='large' rise='-1000'>󰂯</span>",
+		"format-connected-battery": "<span font='12'>{icon}</span>   {device_battery_percentage}%",
+		"format-icons": ["󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"],
+		"tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
+		"tooltip-format-connected": "{icon}  {device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+		"on-click": "blueman-manager"
+	},
+
+	// battery
+
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 10
+		},
+		"format": "<span font='12'>{icon}</span> {capacity}%",
+		"format-charging": "<span font='12'>󰂄</span> {capacity}%",
+		"format-plugged": "<span font='12'>󰂄</span> {capacity}%",
+		"format-alt": "<span font='12'>{icon}</span> {time}",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"tooltip-format": "󰂁 {capacity}%\n{time}"
+	},
+
+	// tray
+
+	"tray": {
+		"icon-size": 14,
+		"spacing": 10
+	},
+
+	// notification
+
+	"custom/notification": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": " ",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+
+	// network
+
+	"network": {
+		"tooltip": false,
+		"format-wifi": "   {bandwidthDownBits}",
+		"format-ethernet": "",
+		"interval": 30
+	},
+
+	// backlight
+
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval": 1,
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
+
+	// media
+
+	"custom/media": {
+		"interval": 30,
+		"format": "{icon} {}",
+		"return-type": "json",
+		"max-length": 20,
+		"format-icons": {
+			"spotify": " ",
+			"default": " "
+		},
+		"escape": true,
+		"exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+		"on-click": "playerctl play-pause"
+	},
+
+	// launcher
+
+	"custom/launcher": {
+		"format": " ",
+		"on-click": "$HOME/.config/rofi/launchers/type-6/launcher.sh",
+		"on-click-right": "killall rofi"
+	},
+
+	// power
+
+	"custom/power": {
+		"format": " ",
+		"on-click": "bash ~/.config/rofi/leave/leave.sh"
+	},
+
+	// updates
+
+	"custom/updates": {
+		"format": "{} Update(s)",
+		"exec": "checkupdates | wc -l",
+		"exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+		"interval": 15,
+		"on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
+	}
+>>>>>>> 5c19f97 (improved config files)
 }

@@ -23,7 +23,10 @@ window {
     border-color:                @foreground;
     background-color:            @background;
     border-radius:               25px;
+<<<<<<< HEAD
     scrollbar-width:             0px; 
+=======
+>>>>>>> 5c19f97 (improved config files)
 }
 mainbox {
     enabled:                     true;
@@ -87,7 +90,11 @@ listview {
     expand:                      false;
     cursor:                      "default";
     background-color:            transparent;
+<<<<<<< HEAD
     text-color:                  white;
+=======
+    text-color:                  @foreground;
+>>>>>>> 5c19f97 (improved config files)
 }
 dummy {
     spacing:                     0em;
@@ -102,11 +109,19 @@ element {
     padding:                     0.5em;
     cursor:                      pointer;
     background-color:            transparent;
+<<<<<<< HEAD
     text-color:                  white;
 }
 element selected.normal {
     background-color:            @foreground;
     text-color:                  @select;
+=======
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            @selected-active-background;
+    text-color:                  white;
+>>>>>>> 5c19f97 (improved config files)
     border-radius:               15px; 
 }
 element-text {

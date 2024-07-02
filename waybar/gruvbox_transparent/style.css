@@ -1,0 +1,90 @@
+@import url("/home/jake/.config/wal/colorschemes/dark/gruvbox-palette.css");
+
+* {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  min-height: 0;
+  font-size: 16px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  padding: 1px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: 0.5s;
+  color: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+window#waybar.empty {
+  background-color: transparent;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  border: 0px;
+  background-color: transparent;
+}
+
+tooltip {
+  opacity: 1;
+  border-radius: 10px;
+}
+
+tooltip label {
+  padding: 10px;
+  color: @fg;
+}
+
+#custom-cava,
+#language,
+#bluetooth,
+#custom-spotify,
+#clock,
+#cpu,
+#memory,
+#mpris,
+#network,
+#pulseaudio,
+#temperature,
+#workspaces,
+#tray,
+#custom-menu,
+#battery,
+#custom-swaync {
+  border-radius: 10px;
+  color: @fg;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#window {
+  color: @fg;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 12px;
+}
+
+#workspaces button {
+  margin: 1px;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#workspaces button.active {
+  color: @fg;
+}
+
+#temperature.critical {
+  background-color: @red;
+}

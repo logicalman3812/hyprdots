@@ -2,75 +2,23 @@
   "layer": "top",
   "width": 1500,
   "margin-top": 10,
-<<<<<<< HEAD
-  "margn-bottom": 0,
-  "gtk-layer-shell": true,
-  "reload_style_on_change": true,
-  // "passthrough": false,
-
-  //Modules layout
-=======
   "margin-bottom": 0,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
 
   // Modules layout
->>>>>>> 5c19f97 (improved config files)
 
   "modules-left": ["hyprland/workspaces", "custom/spotify"],
   "modules-center": ["clock"],
   "modules-right": [
     "hyprland/language",
     "memory",
-<<<<<<< HEAD
-    "bluetooth",
-    "pulseaudio",
-    // "group/audio",
-=======
     "pulseaudio",
     "bluetooth",
->>>>>>> 5c19f97 (improved config files)
     "battery",
     "tray",
   ],
 
-<<<<<<< HEAD
-  // Sourced modules
-
-  // "group/audio": {
-  //   "orientation": "horizontal",
-  //   "modules": ["bluetooth", "pulseaudio"],
-  // },
-
-  // // "pulseaudio": {
-  // 	"tooltip": false,
-  // 	"scroll-step": 5,
-  // 	"format": "{icon} {volume}%",
-  // 	"format-muted": "{icon} {volume}%",
-  // 	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-  // 	"format-icons": {
-  // 		"default": [
-  // 			"<span color='#161617'> </span>",
-  // 			"<span color='#161617'> </span>",
-  // 			"<span color='#161617'>  </span>"
-  // 		]
-  // 	}
-
-  "custom/polycat": {
-    "exec": "/home/jake/polycat/polycat",
-    "tooltip": false,
-  },
-
-  "pulseaudio": {
-    "format": "{icon}    {volume}%",
-    "rotate": 0,
-    "format-muted": "<span size='large' rise='-1500'>󰖁 </span>",
-    "on-click": "pavucontrol -t 3",
-    "on-click-middle": "/home/jake/.config/ricing/volumecontrol.sh -o m",
-    "on-scroll-up": "/home/jake/.config/ricing/volumecontrol.sh -o i",
-    "on-scroll-down": "/home/jake/.config/ricing/volumecontrol.sh -o d",
-    "tooltip-format": "{icon}  {desc} // {volume}%",
-=======
   // workspaces
 
   "hyprland/workspaces": {
@@ -147,7 +95,6 @@
     "on-scroll-up": "$HOME/.config/ricing/volumecontrol.sh -o i",
     "on-scroll-down": "$HOME/.config/ricing/volumecontrol.sh -o d",
     "tooltip-format": "{icon}   {desc} || {volume}%",
->>>>>>> 5c19f97 (improved config files)
     "ignored-sinks": ["Easy Effects Sink"],
     "scroll-step": 5,
     "format-icons": {
@@ -161,53 +108,6 @@
     },
   },
 
-<<<<<<< HEAD
-  // "hyprland/workspaces": {
-  // 	"disable-scroll": true,
-  // 	"on-click": "activate",
-  // 	"all-outputs": true,
-  // 	"active-only": false,
-  // 	"persistent-workspaces": {
-  // 		"1": [],
-  // 		"2": [],
-  // 		"3": [],
-  // 		"4": [],
-  // 		"5": [],
-  // 		"6": []
-  // 	},
-  // 	"format": "{icon}",
-  // 	"format-icons": {
-  // 		"active": "<span font='12'>󰮯</span>",
-  // 		"empty": "<span font='8'></span>",
-  // 		"persistent": "󰊠"
-  // 	}
-
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "urgent": "",
-      "active": "󰮯",
-      "default": "󰊠",
-      "sort-by-number": true,
-    },
-  },
-  "custom/spotify": {
-    "exec": "python /home/jake/.config/waybar/modules/mediaplayer1.py --player spotify",
-    "format": " {}",
-    "rotate": 0,
-    "return-type": "json",
-    "on-click": "playerctl previous --player spotify",
-    "on-click-right": "playerctl next --player spotify",
-    "on-click-middle": "playerctl play-pause --player spotify",
-    "on-scroll-up": "volumecontrol.sh -p spotify i",
-    "on-scroll-down": "volumecontrol.sh -p spotify d",
-    "max-length": 50,
-    "escape": true,
-    "tooltip": true,
-  },
-=======
   // bluetooth
 
   "bluetooth": {
@@ -272,19 +172,15 @@
 
   // network
 
->>>>>>> 5c19f97 (improved config files)
   "network": {
     "tooltip": false,
     "format-wifi": "   {bandwidthDownBits}",
     "format-ethernet": "",
     "interval": 30,
   },
-<<<<<<< HEAD
-=======
 
   // backlight
 
->>>>>>> 5c19f97 (improved config files)
   "backlight": {
     "tooltip": false,
     "format": " {}%",
@@ -292,67 +188,8 @@
     "on-scroll-up": "light -A 5",
     "on-scroll-down": "light -U 5",
   },
-<<<<<<< HEAD
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 10,
-    },
-    "format": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": [" ", " ", " ", " ", " "],
-  },
-
-  "bluetooth": {
-    "format": "<span size='large' rise='-1500'>󰂯</span>",
-    "format-off": "󰂲",
-    "format-disabled": " ",
-    "format-connected": "󰂯",
-    "format-connected-battery": "<span size='large' rise='-1500'>󰂯</span>  {device_battery_percentage}% ",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-    "on-click": "blueman-manager",
-  },
-
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10,
-  },
-
-  "hyprland/language": {
-    "format": "<span font='10'></span>   {}",
-    "format-en": "English",
-    "format-ru": "Russian",
-  },
-
-  "clock": {
-    "tooltip": true,
-    "interval": 60,
-    "format": "<span font='12'>󱑆</span>  {:%I:%M %p}",
-    "format-alt": "<span font='12'>󰃭</span>  {:%a %d, <span font='12'>󱑆</span>  %I:%M %p}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-  },
-
-  "cpu": {
-    "interval": 15,
-    "format": "<span></span>  {}%",
-    "max-length": 10,
-  },
-
-  "memory": {
-    "interval": 30,
-    "format": "<span></span>  {used}GiB",
-    "max-length": 13,
-  },
-=======
 
   // media
->>>>>>> 5c19f97 (improved config files)
 
   "custom/media": {
     "interval": 30,
@@ -367,33 +204,24 @@
     "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
     "on-click": "playerctl play-pause",
   },
-<<<<<<< HEAD
-=======
 
   // launcher
 
->>>>>>> 5c19f97 (improved config files)
   "custom/launcher": {
     "format": " ",
     "on-click": "$HOME/.config/rofi/launchers/type-6/launcher.sh",
     "on-click-right": "killall rofi",
   },
-<<<<<<< HEAD
-=======
 
   // power
 
->>>>>>> 5c19f97 (improved config files)
   "custom/power": {
     "format": " ",
     "on-click": "bash ~/.config/rofi/leave/leave.sh",
   },
-<<<<<<< HEAD
-=======
 
   // updates
 
->>>>>>> 5c19f97 (improved config files)
   "custom/updates": {
     "format": "{} Update(s)",
     "exec": "checkupdates | wc -l",
