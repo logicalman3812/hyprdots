@@ -27,7 +27,7 @@
 | <kbd>PrtScn</kbd>                                                                      | All monitors screenshot capture                      |
 | <kbd>Super</kbd> + <kbd>V</kbd>                                                        | Launch clipboard (rofi)                              |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd>                                                      | Switch keyboard layout                               |
-| <kbd>Ctrl</kbd> + <kbd>ALT<kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>     | Move window focus                                    |
+| <kbd>Ctrl</kbd> + <kbd>ALT</kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>     | Move window focus                                    |
 | <kbd>Alt</kbd> + <kbd>Tab</kbd>                                                        | Change window focus                                  |
 | <kbd>Super</kbd> + <kbd>[0-9]</kbd>                                                    | Switch workspaces                                    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> | Resize windows                                       |
@@ -39,7 +39,3 @@
 
 </div>
 
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
