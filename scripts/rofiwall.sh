@@ -22,11 +22,10 @@ select_wallpaper() {
 set_wallpaper() {
     wallpaper="$1"
     if [ -f "$wallpaper" ]; then
-        # notify-send "Wallpaper successfully updated!"
         swww img "$wallpaper" --transition-type grow --transition-fps 30 --transition-duration 2 --transition-pos 0.810,0.972 --transition-bezier 0.65,0,0.35,1 --transition-step 255 
         wal -i $wallpaper
-        python "$HOME/.config/ricing/pyhypr.py"
-        bash "$HOME/.config/ricing/rofi_wallpaper.sh"
+        python "$HOME/.config/scripts/pyhypr.py"
+        bash "$HOME/.config/scripts/rofi_wallpaper.sh"
     else
         echo "Error: Wallpaper file $wallpaper does not exist."
     fi
@@ -34,7 +33,6 @@ set_wallpaper() {
 
 # Main execution
 
-# Define the directory containing the wallpapers
 wallpaper_dir="$HOME/.config/swww/Wallpapers"
 
 # Check if the directory exists

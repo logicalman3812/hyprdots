@@ -71,9 +71,8 @@ $color15 = {color15}
     with open(output_file, 'w') as f:
         f.write(hyprland_colors)
 
-input_file = '.cache/wal/colors-kitty.conf'
-output_file = '.config/wal/templates/colors-hyprland.conf'
-wallpaper_file = '.cache/wal/wal'
+input_file = '/home/jake/.cache/wal/colors-kitty.conf'
+output_file = '/home/jake/.config/wal/templates/colors-hyprland.conf'
+wallpaper_file = '/home/jake/.cache/wal/wal'
 
 convert_colors(input_file, output_file, wallpaper_file)
-

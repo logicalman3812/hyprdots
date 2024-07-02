@@ -17,26 +17,12 @@ selected_wallpaper_base="${selected_wallpaper%.*}"
 # Get the path to the selected wallpaper
 if [ -n "$selected_wallpaper" ]; then
     selected_wallpaper_path="$wallpapers_dir/$selected_wallpaper"
-<<<<<<< HEAD
-    # Actions with the selected wallpaper (e.g., setting it as the desktop wallpaper)
-    echo "Selected wallpaper: $selected_wallpaper_path"
-    # Send a notification
-    notify-send -i "$icon_path" -t 1500 "Successfully set a new wallpaper" 
-    # Additional actions after selecting wallpapers
-    wal -i $selected_wallpaper_path 
-    swww img $selected_wallpaper_path --transition-type grow --transition-fps 60 --transition-duration 1.0 --transition-pos 0.810,0.972 --transition-bezier 0.65,0,0.35,1 --transition-step 255 
-    bash "$HOME/.config/ricing/hyprwal.sh"
-    python "$HOME/.config/ricing/colorshypr.py"
-
-=======
     echo "Selected wallpaper: $selected_wallpaper_path"
     notify-send -i "$icon_path" -t 1500 "Successfully set a new wallpaper" 
     wal -i $selected_wallpaper_path 
     swww img $selected_wallpaper_path --transition-type grow --transition-fps 30 --transition-duration 2 --transition-pos 0.810,0.972 --transition-bezier 0.65,0,0.35,1 --transition-step 255 
-    # bash "$HOME/.config/ricing/hyprwal.sh"
-    python "$HOME/.config/ricing/pyhypr.py"
-    bash "$HOME/.config/ricing/rofi_wallpaper.sh"
->>>>>>> 5c19f97 (improved config files)
+    python "$HOME/.config/scripts/pyhypr.py"
+    bash "$HOME/.config/scripts/rofi_wallpaper.sh"
 else
     echo "Selection canceled"
 fi
