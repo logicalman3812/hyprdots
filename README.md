@@ -10,6 +10,8 @@
 | :------------------------------------------------------------------------------------- | :--------------------------------------------------- |
 | <kbd>Super</kbd> + <kbd>Q</kbd><br>                                                    | Close focused window                                 |
 | <kbd>Super</kbd> + <kbd>W</kbd>                                                        | Toggle the window between focus and float            |
+| <kbd>Ctrl</kbd> + <kbd>Space</kbd>                                                     | Choose waybar style (rofi)                           |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd>                                     | Launch wallpaper select menu (rofi)                  |
 | <kbd>Super</kbd> + <kbd>G</kbd>                                                        | Disable hypr effects for gamemode                    |
 | <kbd>Alt</kbd> + <kbd>Enter</kbd>                                                      | Toggle the window between focus and fullscreen       |
 | <kbd>Super</kbd> + <kbd>L</kbd>                                                        | Launch lock screen (hyprlock)                        |
@@ -27,7 +29,7 @@
 | <kbd>PrtScn</kbd>                                                                      | All monitors screenshot capture                      |
 | <kbd>Super</kbd> + <kbd>V</kbd>                                                        | Launch clipboard (rofi)                              |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd>                                                      | Switch keyboard layout                               |
-| <kbd>Ctrl</kbd> + <kbd>ALT</kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>     | Move window focus                                    |
+| <kbd>Ctrl</kbd> + <kbd>ALT</kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>    | Move window focus                                    |
 | <kbd>Alt</kbd> + <kbd>Tab</kbd>                                                        | Change window focus                                  |
 | <kbd>Super</kbd> + <kbd>[0-9]</kbd>                                                    | Switch workspaces                                    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> | Resize windows                                       |
@@ -38,4 +40,3 @@
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>L</kbd>                                      | Move between grouped windows forward                 |
 
 </div>
-
