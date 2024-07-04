@@ -28,13 +28,8 @@ return {
         "▒██░   ▓██░░▒████░ ████▓▒░   ▒▀█░   ░██▒▒██▒   ░██▒",
         "░ ▒░   ▒ ▒ ░░ ▒░ ░ ▒░▒░▒░    ░ ▐░   ░▓ ░░ ▒░   ░  ░",
         "░ ░░   ░ ▒░ ░ ░    ░ ▒ ▒░    ░ ░░    ▒ ░░  ░      ░",
-<<<<<<< HEAD
-           "░   ░ ░    ░  ░ ░ ░ ▒       ░░    ▒  ░      ░   ",
-                 "░    ░      ░ ░        ░    ░ ░       ░   ",
-=======
         "░   ░ ░    ░  ░ ░ ░ ▒       ░░    ▒  ░      ░   ",
         "░    ░      ░ ░        ░    ░ ░       ░   ",
->>>>>>> 5c19f97 (improved config files)
       }
       return opts
     end,
@@ -42,23 +37,6 @@ return {
 
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
-<<<<<<< HEAD
-  { 'uZer/pywal16.nvim', as = 'pywal16' },
-  {
-      "Exafunction/codeium.nvim",
-      dependencies = {
-          "nvim-lua/plenary.nvim",
-          "hrsh7th/nvim-cmp",
-      },
-      config = function()
-          require("codeium").setup({
-          })
-      end
-  },
-  { "karb94/neoscroll.nvim",
-    config = function ()
-    require('neoscroll').setup({})
-=======
   { "rebelot/kanagawa.nvim" },
   { 'uZer/pywal16.nvim',            as = 'pywal16' },
   { "luisiacc/gruvbox-baby" },
@@ -90,10 +68,24 @@ return {
     end
   },
   {
+    "kndndrj/nvim-dbee",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+    build = function()
+      -- Install tries to automatically detect the install method.
+      -- if it fails, try calling it with one of these parameters:
+      --    "curl", "wget", "bitsadmin", "go"
+      require("dbee").install()
+    end,
+    config = function()
+      require("dbee").setup( --[[optional config]])
+    end,
+  },
+  {
     "karb94/neoscroll.nvim",
     config = function()
       require('neoscroll').setup({})
->>>>>>> 5c19f97 (improved config files)
     end
   },
 
@@ -101,11 +93,7 @@ return {
   {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
-<<<<<<< HEAD
-      require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-=======
       require "astronvim.plugins.configs.luasnip" (plugin, opts) -- include the default astronvim config that calls the setup call
->>>>>>> 5c19f97 (improved config files)
       -- add more custom luasnip configuration such as filetype extend or custom snippets
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
@@ -115,11 +103,7 @@ return {
   {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
-<<<<<<< HEAD
-      require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
-=======
       require "astronvim.plugins.configs.nvim-autopairs" (plugin, opts) -- include the default astronvim config that calls the setup call
->>>>>>> 5c19f97 (improved config files)
       -- add more custom autopairs configuration such as custom rules
       local npairs = require "nvim-autopairs"
       local Rule = require "nvim-autopairs.rule"
@@ -127,20 +111,6 @@ return {
       npairs.add_rules(
         {
           Rule("$", "$", { "tex", "latex" })
-<<<<<<< HEAD
-            -- don't add a pair if the next character is %
-            :with_pair(cond.not_after_regex "%%")
-            -- don't add a pair if  the previous character is xxx
-            :with_pair(
-              cond.not_before_regex("xxx", 3)
-            )
-            -- don't move right when repeat character
-            :with_move(cond.none())
-            -- don't delete if the next character is xx
-            :with_del(cond.not_after_regex "xx")
-            -- disable adding a newline when you press <cr>
-            :with_cr(cond.none()),
-=======
           -- don't add a pair if the next character is %
               :with_pair(cond.not_after_regex "%%")
           -- don't add a pair if  the previous character is xxx
@@ -153,54 +123,12 @@ return {
               :with_del(cond.not_after_regex "xx")
           -- disable adding a newline when you press <cr>
               :with_cr(cond.none()),
->>>>>>> 5c19f97 (improved config files)
         },
         -- disable for .vim files, but it work for another filetypes
         Rule("a", "a", "-vim")
       )
     end,
   },
-<<<<<<< HEAD
-    {
-      "akinsho/toggleterm.nvim",
-      version = "*",
-      config = function()
-        require("toggleterm").setup{
-          size = 20,
-          open_mapping = [[<c-\>]], -- You can keep this default binding
-          hide_numbers = true,
-          shade_filetypes = {},
-          shade_terminals = true,
-          shading_factor = '1',
-          start_in_insert = true,
-          insert_mappings = true,
-          persist_size = true,
-          direction = 'horizontal', -- This ensures that terminals are opened horizontally by default
-          close_on_exit = true,
-          shell = vim.o.shell,
-          float_opts = {
-            border = 'curved',
-            winblend = 0,
-            highlights = {
-              border = "Normal",
-              background = "Normal",
-            }
-          }
-        }
-      end,
-    },
-    {
-      "Exafunction/codeium.nvim",
-      dependencies = {
-          "nvim-lua/plenary.nvim",
-          "hrsh7th/nvim-cmp",
-      },
-      config = function()
-          require("codeium").setup({
-          })
-      end
-    },
-=======
   {
     "akinsho/toggleterm.nvim",
     version = "*",
@@ -240,7 +168,6 @@ return {
       })
     end
   },
->>>>>>> 5c19f97 (improved config files)
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
@@ -258,16 +185,9 @@ return {
           never_show = {},
         },
       },
-<<<<<<< HEAD
-    },
-  },
-}
-
-=======
       window = {
         position = "right",
       },
     },
   },
 }
->>>>>>> 5c19f97 (improved config files)

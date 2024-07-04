@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 5c19f97 (improved config files)
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -15,19 +11,11 @@ return {
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-<<<<<<< HEAD
-      autopairs = true, -- enable autopairs at start
-      cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
-      highlighturl = true, -- highlight URLs at start
-      notifications = true, -- enable notifications at start
-=======
       autopairs = true,                                 -- enable autopairs at start
       cmp = true,                                       -- enable completion at start
       diagnostics_mode = 3,                             -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
       highlighturl = true,                              -- highlight URLs at start
       notifications = true,                             -- enable notifications at start
->>>>>>> 5c19f97 (improved config files)
       show_single_buffers = false,
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -37,21 +25,12 @@ return {
     },
     -- vim options can be configured here
     options = {
-<<<<<<< HEAD
-      opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
-        number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
-        signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
-=======
       opt = {                  -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true,         -- sets vim.opt.number
         spell = false,         -- sets vim.opt.spell
         signcolumn = "yes",    -- sets vim.opt.signcolumn to yes
         wrap = false,          -- sets vim.opt.wrap
->>>>>>> 5c19f97 (improved config files)
         swapfile = false,
       },
       g = { -- vim.g.<key>

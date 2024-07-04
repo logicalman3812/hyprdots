@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 5c19f97 (improved config files)
 -- AstroUI provides the basis for configuring the AstroNvim User Interface
 -- Configuration documentation can be found with `:h astroui`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -13,22 +9,14 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-<<<<<<< HEAD
-    colorscheme = "pywal16",
-=======
-    colorscheme = "pywal",
->>>>>>> 5c19f97 (improved config files)
+    colorscheme = "vesper",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
       },
       -- astrodark = { -- a table of overrides/changes when applying the astrotheme theme
-<<<<<<< HEAD
-        -- Normal = { bg = "#000000" },
-=======
       -- Normal = { bg = "#000000" },
->>>>>>> 5c19f97 (improved config files)
       -- },
     },
     -- Icons can be configured throughout the interface

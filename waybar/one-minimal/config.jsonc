@@ -100,7 +100,7 @@
     "format-icons": {
       "headphone": "",
       "hands-free": "",
-      "headset": "",
+      "headset": "<span rise='1000'></span>",
       "phone": "",
       "portable": "",
       "car": "",

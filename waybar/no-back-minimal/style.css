@@ -12,7 +12,7 @@
 /* window colors */
 
 window#waybar {
-  background-color: @background;
+  background-color: transparent;
   border-radius: 15px;
   margin-top: 6px;
 }
@@ -35,7 +35,7 @@ window#waybar.hidden {
 #workspaces {
   margin: 6px 6px 6px 6px;
   border-radius: 18px;
-  background: @background;
+  background: @color7;
   transition: none;
   padding-left: 6px;
   padding-right: 6px;
@@ -63,12 +63,12 @@ window#waybar.hidden {
 
 #workspaces button.active {
   transition: none;
-  color: #e6b99d;
+  color: @background;
   background: transparent;
   font-size: 4px;
 }
 
-/* spotify  */
+/* spotify */
 
 #custom-spotify {
   margin-top: 6px;
@@ -81,7 +81,7 @@ window#waybar.hidden {
   transition: none;
   font-size: 14px;
   font-weight: bold;
-  background-color: @color2;
+  background-color: @color7;
   color: @background;
 }
 
@@ -99,7 +99,7 @@ window#waybar.hidden {
   /* font-size: 14px; */
   font-weight: bold;
   color: @background;
-  background: @color3;
+  background: @color7;
 }
 
 /* language */
@@ -116,7 +116,7 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color4;
+  background: @color7;
 }
 
 /* memory */
@@ -134,7 +134,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color5;
+  background: @color7;
 }
 
 /* pulseaudio */
@@ -151,7 +151,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color6;
+  background: @color7;
 }
 
 /* bluetooth  */
@@ -185,17 +185,17 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color8;
+  background: @color7;
 }
 
 #battery.charging,
 #battery.plugged {
   color: #161617;
-  background-color: @color8;
+  background-color: @color7;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @color9;
+  background-color: @color7;
   color: @background;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -206,7 +206,7 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    color: @color9;
+    color: @color7;
   }
 }
 
@@ -223,8 +223,8 @@ window#waybar.hidden {
   transition: none;
   font-size: 14px;
   font-weight: bold;
-  /* color: @background; */
-  background: @background;
+  color: @background;
+  background: @color7;
 }
 
 /* unused modules */

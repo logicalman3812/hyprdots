@@ -72,16 +72,16 @@ window#waybar.hidden {
 
 #custom-spotify {
   margin-top: 6px;
-  margin-left: 0px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-right: 5px;
-  margin-bottom: 6px;
   border-radius: 20px;
   transition: none;
   font-size: 14px;
   font-weight: bold;
-  background-color: @color7;
+  background-color: @color2;
   color: @background;
 }
 
@@ -99,7 +99,7 @@ window#waybar.hidden {
   /* font-size: 14px; */
   font-weight: bold;
   color: @background;
-  background: @color7;
+  background: @color2;
 }
 
 /* language */
@@ -116,7 +116,7 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color7;
+  background: @color2;
 }
 
 /* memory */
@@ -134,7 +134,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color7;
+  background: @color2;
 }
 
 /* pulseaudio */
@@ -151,7 +151,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color7;
+  background: @color2;
 }
 
 /* bluetooth  */
@@ -168,7 +168,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color7;
+  background: @color2;
 }
 
 /* battery */
@@ -185,17 +185,17 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color7;
+  background: @color2;
 }
 
 #battery.charging,
 #battery.plugged {
   color: #161617;
-  background-color: @color7;
+  background-color: @color6;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @color7;
+  background-color: @color8;
   color: @background;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -206,7 +206,7 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    color: @color7;
+    color: @color2;
   }
 }
 
