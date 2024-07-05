@@ -41,4 +41,3 @@ select_config() {
 }
 
 select_config
-
