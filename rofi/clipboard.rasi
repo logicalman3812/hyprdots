@@ -2,7 +2,7 @@
 configuration {
     modi:                        "drun";
     show-icons:                  false;
-    font:                        "SF Pro Text 14";
+    font:                        "SF Pro Text 10";
 }
 
 

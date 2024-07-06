@@ -1,15 +1,12 @@
 
-
 #!/bin/bash
 
 WAYBAR_DIR="$HOME/.config/waybar"
 ROFI_CONFIG_PATH="$HOME/.config/rofi/selectwall.rasi"
 
-# Игнорируемые элементы
 IGNORE_LIST=("style.css" "config.jsonc" "modules")
 
 select_config() {
-    # Получаем список папок в директории WAYBAR_DIR, исключая элементы из IGNORE_LIST
     CONFIG_DIRS=("$WAYBAR_DIR"/*)
     CONFIG_NAMES=()
     for dir in "${CONFIG_DIRS[@]}"; do
@@ -41,3 +38,4 @@ select_config() {
 }
 
 select_config
+

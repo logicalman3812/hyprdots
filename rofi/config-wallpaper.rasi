@@ -16,10 +16,12 @@ configuration {
 
 
 /* ---- Window ---- */
+
 window {
     width:                        761px;
-    x-offset:                     350px;
-    y-offset:                     350px;
+    height:                       600px; 
+    x-offset:                     calc((1920px - 761px) / 2);
+    y-offset:                     calc((1080px - 600px) / 2);
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
@@ -28,8 +30,8 @@ window {
     border-color:                 @selected-urgent-background;
     cursor:                       "default";
     transparency:                 "real";
-    location:                     north;
-    anchor:                       north;
+    location:                     center; /* Center the window */
+    anchor:                       center; /* Anchor to the center */
     fullscreen:                   false;
     enabled:                      true;
     border-radius:                10px;

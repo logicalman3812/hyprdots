@@ -4,6 +4,8 @@ if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable",
     lazypath })
 end
+
+vim.api.nvim_set_keymap('n', 'dw', 'd$', { noremap = true, silent = true })
 vim.opt.rtp:prepend(lazypath)
 vim.opt.swapfile = false
 vim.o.guicursor = table.concat({
@@ -11,6 +13,9 @@ vim.o.guicursor = table.concat({
   "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
   "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
 }, ",")
+vim.cmd([[
+  autocmd ColorScheme pywal16 highlight Comment guibg=none ctermbg=none
+]])
 
 -- validate that lazy is available
 if not pcall(require, "lazy") then
@@ -21,6 +26,7 @@ if not pcall(require, "lazy") then
   vim.fn.getchar()
   vim.cmd.quit()
 end
+
 
 require "lazy_setup"
 require "polish"

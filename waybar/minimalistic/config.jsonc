@@ -87,7 +87,7 @@
 	// pulseaudio
 
 	"pulseaudio": {
-		"format": "{icon}    {volume}%",
+		"format": "{icon}     {volume}%",
 		"rotate": 0,
 		"format-muted": "<span size='large' rise='-1000'>󰖁 </span>",
 		"on-click": "pavucontrol -t 3",

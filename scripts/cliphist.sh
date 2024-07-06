@@ -7,7 +7,7 @@ conf_path="$HOME/.config/rofi/clipboard.rasi"
 
 #// set rofi scaling
 [[ "${rofiScale}" =~ ^[0-9]+$ ]] || rofiScale=10
-r_scale="configuration {font: \"JetBrainsMono Nerd Font ${rofiScale}\";}"
+# r_scale="configuration {font: \"JetBrainsMono Nerd Font ${rofiScale}\";}"
 wind_border=$((hypr_border * 3 / 2))
 elem_border=$([ $hypr_border -eq 0 ] && echo "5" || echo $hypr_border)
 
@@ -41,7 +41,7 @@ monRes[2]="$(echo "${monRes[2]}" | sed "s/\.//")"
 #// clipboard action
 case "${1}" in
 c|-c|--copy)
-    cliphist list | rofi -dmenu -theme-str "entry { placeholder: \"Copy...\";}" -theme-str "${r_scale}" -theme-str "${r_override}" -config "${conf_path}" | cliphist decode | wl-copy
+    cliphist list | rofi -dmenu -theme-str "entry { placeholder: \"Copy...\";}"  -theme-str "${r_override}" -config "${conf_path}" | cliphist decode | wl-copy
     sleep 0.1
     xdotool search --sync --onlyvisible --classname "rofi" windowactivate --sync %@
     ;;

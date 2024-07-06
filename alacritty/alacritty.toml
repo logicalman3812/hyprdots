@@ -1,0 +1,15 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 20
+padding.y = 20
+
+opacity = 1 
+decorations = "Buttonless"
+blur = false 
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+# normal.family = "DejaVu Sans Mono Book"
+size = 16.0

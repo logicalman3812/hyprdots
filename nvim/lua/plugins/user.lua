@@ -36,9 +36,8 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
   { "rebelot/kanagawa.nvim" },
-  { 'uZer/pywal16.nvim',            as = 'pywal16' },
+  { 'uZer/pywal16.nvim',        as = 'pywal16' },
   { "luisiacc/gruvbox-baby" },
   { "AlphaTechnolog/pywal.nvim" },
   -- { "oncomouse/lushwal.nvim" },
