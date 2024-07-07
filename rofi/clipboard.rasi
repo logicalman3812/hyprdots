@@ -1,8 +1,11 @@
+
+@import "~/.config/rofi/vim.rasi"
+
 // Config //
 configuration {
     modi:                        "drun";
     show-icons:                  false;
-    font:                        "SF Pro Text 10";
+    font:                        "SF Pro Text 11";
 }
 
 
@@ -11,15 +14,18 @@ configuration {
 
 // Main //
 window {
-    width:                       23em;
-    height:                      30em;
+
+    width:						 400px;
+    x-offset:                    0px;
+    y-offset:                    0px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
     cursor:                      "default";
     spacing:                     0em;
     padding:                     0em;
-    border-color:                grey;
+    border:                      2px;
+    border-color:                @urgent-background;
     background-color:            @background;
     border-radius:               25px;
 }
@@ -37,16 +43,14 @@ wallbox {
     expand:                      false;
     orientation:                 horizontal;
     background-color:            transparent;
-    background-image:            url("~/.cache/hyde/wall.blur", width);
     children:                    [ "wallframe" , "inputbar" ];
 }
 wallframe {
-    width:                       5em;
+    width:                       0em;
     spacing:                     0em;
     padding:                     0em;
     expand:                      false;
     background-color:            @background;
-    background-image:            url("~/.cache/hyde/wall.quad", width);
 }
 
 // Inputs //
@@ -85,6 +89,7 @@ listview {
     cursor:                      "default";
     background-color:            transparent;
     text-color:                  @select;
+	scrollbar:                   false;
 }
 dummy {
     spacing:                     0em;
@@ -102,9 +107,9 @@ element {
     text-color:                  @select;
 }
 element selected.normal {
-    background-color:            @foreground;  
-    text-color:                  @select;
-    border-radius:               10px; 
+    background-color:            @selected-normal-background;  
+    text-color:                  black;
+    border-radius:               15px; 
 }
 element-text {
     vertical-align:              0.0;

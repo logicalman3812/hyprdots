@@ -1,3 +1,6 @@
+
+@import "~/.config/rofi/vim.rasi"
+
 /*
 #  ____        __ _  
 # |  _ \ ___  / _(_) 

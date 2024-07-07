@@ -16,8 +16,8 @@ configuration {
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
 	dpi:						1;
+    
 }
-
 
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
@@ -91,7 +91,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                    true;
     expand:                     false;
-    str:                        " ";
+    str:                        "󱂩 ";
     text-color:                 inherit;
 	background-color:			transparent;
 }
@@ -112,7 +112,7 @@ listview {
 	lines:						 7;
 	spacing:                     4px;
 	dynamic:                     true;
-	cycle:                       true;
+	cycle:                       false;
 	scrollbar:                   false;
 	layout:                      vertical;
 	reverse:                     false;
@@ -125,7 +125,7 @@ listview {
 /* ---- Element ---- */
 element {
     enabled:                    true;
-    padding:                    5px;
+    padding:                    4px;
     margin:                     2px;
     cursor:                     pointer;
     background-color:         	transparent;

@@ -1,3 +1,6 @@
+
+@import "~/.config/rofi/vim.rasi"
+
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,run";
