@@ -13,9 +13,24 @@ vim.o.guicursor = table.concat({
   "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
   "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
 }, ",")
+
 vim.cmd([[
   autocmd ColorScheme pywal16 highlight Comment guibg=none ctermbg=none
 ]])
+
+-- vim.cmd [[
+--   augroup WhichKey
+--     autocmd!
+--     autocmd FileType which-key lua vim.api.nvim_set_hl(0, "WhichKeyFloat", {bg = "NONE"})
+--   augroup END
+-- ]]
+
+vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { bg = "NONE", fg = "NONE" })
+
+vim.api.nvim_set_hl(0, "WinSeparator", { bg = "NONE", fg = "NONE" })
 
 -- validate that lazy is available
 if not pcall(require, "lazy") then

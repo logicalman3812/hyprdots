@@ -1,0 +1,121 @@
+
+@import "~/.config/rofi/vim.rasi"
+
+// Config //
+configuration {
+    modi:                        "drun";
+    show-icons:                  false;
+    font:                        "SF Pro Text 11";
+}
+
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+
+// Main //
+window {
+
+    width:						 400px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    transparency:                "real";
+    fullscreen:                  false;
+    enabled:                     true;
+    cursor:                      "default";
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      2px;
+    border-color:                @urgent-background;
+    background-color:            @background;
+    border-radius:               25px;
+}
+mainbox {
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     0.5em;
+    orientation:                 vertical;
+    children:                    [ "wallbox" , "listbox" ];
+    background-color:            transparent;
+}
+wallbox {
+    spacing:                     0em;
+    padding:                     0em;
+    expand:                      false;
+    orientation:                 horizontal;
+    background-color:            transparent;
+    children:                    [ "wallframe" , "inputbar" ];
+}
+wallframe {
+    width:                       0em;
+    spacing:                     0em;
+    padding:                     0em;
+    expand:                      false;
+    background-color:            @background;
+}
+
+// Inputs //
+inputbar {
+    enabled:                     true;
+    padding:                     0em;
+    children:                    [ "entry" ];
+    background-color:            @background;
+    expand:                      true;
+}
+entry {
+    enabled:                     true;
+    padding:                     1.8em;
+    text-color:                  @foreground;
+    background-color:            @background;
+}
+
+
+// Lists //
+listbox {
+    spacing:                     0em;
+    padding:                     0em;
+    orientation:                 vertical;
+    children:                    [ "dummy" , "listview" , "dummy" ];
+    background-color:            transparent;
+}
+listview {
+    enabled:                     true;
+    padding:                     0.5em;
+    columns:                     1;
+    lines:                       11; 
+    cycle:                       true;
+    fixed-height:                true;
+    fixed-columns:               false;
+    expand:                      false;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @select;
+	scrollbar:                   false;
+}
+dummy {
+    spacing:                     0em;
+    padding:                     0em;
+    background-color:            transparent;
+}
+
+
+// Elements //
+element {
+    enabled:                     true;
+    padding:                     0.5em;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @select;
+}
+element selected.normal {
+    background-color:            @selected-normal-background;  
+    text-color:                  black;
+    border-radius:               15px; 
+}
+element-text {
+    vertical-align:              0.0;
+    horizontal-align:            0.0;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+

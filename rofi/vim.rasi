@@ -1,4 +1,3 @@
-
 configuration {
     modi:                       "drun,run";
     kb-row-up:                  "Up,k,Shift+Tab,Shift+ISO_Left_Tab";

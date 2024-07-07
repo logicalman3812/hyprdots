@@ -111,7 +111,7 @@
 	// bluetooth
 
 	"bluetooth": {
-		"format": "<span font='13'>󰂯</span>",
+		"format": "<span font='12'>󰂯</span>",
 		"format-off": "<span font='13'>󰂲</span>",
 		"format-disabled": "<span font='13'>󰂲</span>",
 		"format-connected": "<span size='large' rise='-1000'>󰂯</span>",

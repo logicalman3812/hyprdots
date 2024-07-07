@@ -38,7 +38,7 @@ window#waybar.hidden {
   background: @background;
   transition: none;
   padding-left: 6px;
-  padding-right: 6px;
+  padding-right: 0px;
 }
 
 #workspaces button {
@@ -72,7 +72,7 @@ window#waybar.hidden {
 
 #custom-spotify {
   margin-top: 6px;
-  margin-left: 5px;
+  margin-left: 0px;
   margin-right: 10px;
   margin-bottom: 5px;
   padding-left: 10px;
