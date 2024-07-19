@@ -1,0 +1,37 @@
+/* Background Colors */
+@define-color background #17181C;
+/* BG */
+@define-color background-mid #1E1F24;
+/* Mid BG */
+@define-color background-light #26272B;
+/* Light BG */
+@define-color background-dark-grey #333438;
+/* Dark Grey */
+
+/* Foreground Colors */
+@define-color foreground-light-grey #8F9093;
+/* Light Grey */
+@define-color foreground-dark #B0B1B4;
+/* Dark FG */
+@define-color foreground-mid #CBCCCE;
+/* Mid FG */
+@define-color foreground #E4E5E7;
+/* FG */
+
+/* Accent Colors */
+@define-color accent-pink #FA3867;
+/* Pink */
+@define-color accent-orange #F3872F;
+/* Orange */
+@define-color accent-gold #FEBD16;
+/* Gold */
+@define-color accent-lime #3FD43B;
+/* Lime */
+@define-color accent-turquoise #47E7CE;
+/* Turquoise */
+@define-color accent-blue #53ADE1;
+/* Blue */
+@define-color accent-violet #AD60FF;
+/* Violet */
+@define-color accent-red #FC3F2C;
+/* Red */

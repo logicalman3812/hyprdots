@@ -1,6 +1,5 @@
 import re
 
-
 def hex_to_rgba_string(hex_color):
     hex_color = hex_color.lstrip('#')
     if len(hex_color) == 6:
@@ -24,8 +23,7 @@ def convert_colors(input_file, output_file, wallpaper_file):
     
     hyprland_template = """
 $wallpaper = {wallpaper}
-$background = {background}
-$foreground = {foreground}
+$background = {background} $foreground = {foreground}
 $cursor = {cursor}
 $color0 = {color0}
 $color1 = {color1}
@@ -71,8 +69,8 @@ $color15 = {color15}
     with open(output_file, 'w') as f:
         f.write(hyprland_colors)
 
-input_file = '/home/jake/.cache/wal/colors-kitty.conf'
-output_file = '/home/jake/.config/wal/templates/colors-hyprland.conf'
-wallpaper_file = '/home/jake/.cache/wal/wal'
+input_file = '.cache/wal/colors-kitty.conf'
+output_file = '.config/wal/templates/colors-hyprland.conf'
+wallpaper_file = '.cache/wal/wal'
 
 convert_colors(input_file, output_file, wallpaper_file)

@@ -3,7 +3,7 @@
 #// set variables
 scrDir=$(dirname "$(realpath "$0")")
 # source $scrDir/globalcontrol.sh
-conf_path="$HOME/.config/rofi/clipboard.rasi"
+conf_path="$HOME/.config/rofi/cliphist.rasi"
 
 #// set rofi scaling
 [[ "${rofiScale}" =~ ^[0-9]+$ ]] || rofiScale=10

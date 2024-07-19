@@ -2,9 +2,9 @@
 #!/bin/bash
 
 WAYBAR_DIR="$HOME/.config/waybar"
-ROFI_CONFIG_PATH="$HOME/.config/rofi/selectwall.rasi"
+ROFI_CONFIG_PATH="$HOME/.config/rofi/waybar.rasi"
 
-IGNORE_LIST=("style.css" "config.jsonc" "modules")
+IGNORE_LIST=("style.css" "config.jsonc" "modules" "styles")
 
 select_config() {
     CONFIG_DIRS=("$WAYBAR_DIR"/*)

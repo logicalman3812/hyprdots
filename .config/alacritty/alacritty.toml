@@ -1,15 +1,21 @@
+# import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
 [env]
 TERM = "xterm-256color"
 
 [window]
-padding.x = 20
-padding.y = 20
+padding.x = 15
+padding.y = 15
 
-opacity = 1 
+opacity = 0.8
 decorations = "Buttonless"
-blur = false 
+blur = true
 
 [font]
-normal.family = "JetBrainsMono Nerd Font"
-# normal.family = "DejaVu Sans Mono Book"
+# normal.family = "JetBrainsMono Nerd Font Mono"
+# normal.family = "FiraCode Nerd Font"
+normal.family = "CaskaydiaMono Nerd Font"
 size = 16.0
+
+[mouse]
+hide_when_typing = true

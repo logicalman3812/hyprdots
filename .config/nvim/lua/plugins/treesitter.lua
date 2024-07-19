@@ -1,15 +1,39 @@
--- Customize Treesitter
-
----@type LazySpec
 return {
-  "nvim-treesitter/nvim-treesitter",
-  opts = function(_, opts)
-    -- add more things to the ensure_installed table protecting against community packs modifying it
-    opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-      "lua",
-      "vim",
-      "python",
-      -- add more arguments for adding more treesitter parsers
-    })
-  end,
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	config = function()
+		local configs = require("nvim-treesitter.configs")
+
+		configs.setup({
+			ensure_installed = {
+				"bash",
+				"html",
+				"json",
+				"jsonc",
+				"lua",
+				"markdown",
+				"markdown_inline",
+				"python",
+				"regex",
+				"yaml",
+				"hyprlang",
+				"rasi",
+			},
+			auto_install = true,
+			highlight = { enable = true },
+			indent = { enable = true },
+			context_commentstring = {
+				enable = true,
+				enable_autocmd = false,
+			},
+
+			vim.filetype.add({
+				extension = { rasi = "rasi" },
+				pattern = {
+					[".*/waybar/config"] = "jsonc",
+					[".*/hypr/.*%.conf"] = "hyprlang",
+				},
+			}),
+		})
+	end,
 }

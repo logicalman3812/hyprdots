@@ -9,7 +9,7 @@ select_wallpaper() {
     done
 
     # Display rofi menu and get the selected wallpaper
-    selected_wallpaper=$(echo -e "$rofi_input" | rofi -dmenu -i -p "Select Wallpaper" -config ~/.config/rofi/config-wallpaper.rasi)
+    selected_wallpaper=$(echo -e "$rofi_input" | rofi -dmenu -i -p "Select Wallpaper" -config ~/.config/rofi/wallpaper.rasi)
 
     if [ -n "$selected_wallpaper" ]; then
         echo "$selected_wallpaper"
@@ -26,7 +26,7 @@ set_wallpaper() {
         wal -a 100 -i $wallpaper
         # python ~/.config/scripts/material_you/material_you.py --image $wallpaper
         python "$HOME/.config/scripts/pyhypr.py"
-        bash "$HOME/.config/scripts/rofi_wallpaper.sh"
+        pywalfox update
     else
         echo "Error: Wallpaper file $wallpaper does not exist."
     fi
