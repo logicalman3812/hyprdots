@@ -5,7 +5,10 @@
   "margin-bottom": 0,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
+  "fixed-center": true,
+
   // Modules layout
+
   "modules-left": ["hyprland/workspaces", "custom/spotify"],
   "modules-center": ["custom/weather", "clock"],
   "modules-right": [
@@ -16,6 +19,7 @@
     "battery",
     "tray",
   ],
+
   "custom/weather": {
     "format": "{}°C",
     "tooltip": false,
@@ -23,7 +27,9 @@
     "exec": "wttrbar --location Russia --custom-indicator '{ICON} {temp_C}'",
     "return-type": "json",
   },
+
   // workspaces
+
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -35,7 +41,9 @@
       "sort-by-number": true,
     },
   },
+
   // spotify
+
   "custom/spotify": {
     "exec": "python $HOME/.config/waybar/modules/mediaplayer.py --player spotify",
     "format": " {}",
@@ -50,7 +58,9 @@
     "escape": true,
     "tooltip-format": " {}",
   },
+
   // clock
+
   "clock": {
     "tooltip": true,
     "interval": 60,
@@ -65,20 +75,26 @@
       },
     },
   },
+
   // language
+
   "hyprland/language": {
     "format": "<span font='12'>󰌌</span>  {}",
     "format-en": "English",
     "format-ru": "Russian",
   },
+
   // memory
+
   "memory": {
     "interval": 15,
     "format": "<span></span>  {used}GiB",
     "max-length": 13,
     "tooltip-format": "󰍛  {used}GiB",
   },
+
   // pulseaudio
+
   "pulseaudio": {
     "format": "{icon}     {volume}%",
     "rotate": 0,
@@ -100,7 +116,9 @@
       "default": ["", "", " "],
     },
   },
+
   // bluetooth
+
   "bluetooth": {
     "format": "<span font='12'>󰂯</span>",
     "format-off": "<span font='13'>󰂲 Off</span>",

@@ -27,6 +27,8 @@ set_wallpaper() {
         # python ~/.config/scripts/material_you/material_you.py --image $wallpaper
         python "$HOME/.config/scripts/pyhypr.py"
         pywalfox update
+        walogram -B -i $wallpaper
+        pkill swaync && swaync &
     else
         echo "Error: Wallpaper file $wallpaper does not exist."
     fi

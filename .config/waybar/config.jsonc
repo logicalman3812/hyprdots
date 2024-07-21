@@ -5,6 +5,7 @@
   "margin-bottom": 0,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
+	"fixed-center": true,
   // Modules layout
   "modules-left": ["hyprland/workspaces", "custom/spotify"],
   "modules-center": ["custom/weather", "clock"],

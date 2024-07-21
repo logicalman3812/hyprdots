@@ -13,7 +13,7 @@
 
 window#waybar {
   background: alpha(@background, 0.3);
-  border-radius: 15px;
+  border-radius: 20px;
   margin-top: 6px;
 }
 
@@ -24,18 +24,18 @@ window#waybar.hidden {
 #window {
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 18px;
+  border-radius: 20px;
   transition: none;
-  color: transparent;
-  background: transparent;
+  background: alpha(@background, 0.1);
+  border-radius: 10px;
+  color: lighter(@color6);
 }
 
 /* workspaces colors */
 
 #workspaces {
   margin: 6px 6px 6px 6px;
-  border-radius: 18px;
-  background: transparent;
+  border-radius: 20px;
   transition: none;
   padding-left: 6px;
   padding-right: 0px;
@@ -43,7 +43,6 @@ window#waybar.hidden {
 
 #workspaces button {
   transition: none;
-  color: @foreground;
   background: transparent;
   margin-right: 10px;
 }
@@ -81,7 +80,7 @@ window#waybar.hidden {
   transition: none;
   font-size: 14px;
   font-weight: bold;
-  background-color: @color4;
+  background-color: @color6;
   color: @background;
 }
 
@@ -97,7 +96,7 @@ window#waybar.hidden {
   transition: none;
   font-weight: bold;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 /* cava */
@@ -128,7 +127,7 @@ window#waybar.hidden {
   transition: none;
   font-weight: bold;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 /* language */
@@ -145,7 +144,7 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 /* memory */
@@ -163,7 +162,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 /* pulseaudio */
@@ -180,7 +179,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 /* bluetooth  */
@@ -197,7 +196,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 /* battery */
@@ -214,7 +213,7 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color4;
+  background: @color6;
 }
 
 #battery.charging,
@@ -235,7 +234,7 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    color: @color4;
+    color: @color6;
   }
 }
 

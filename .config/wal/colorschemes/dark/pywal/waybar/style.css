@@ -1,0 +1,298 @@
+/* import pywal colors */
+
+@import url("/home/jake/.cache/wal/colors-waybar.css");
+
+* {
+  border: none;
+  border-radius: 18px;
+  font-family: "SF Pro Text";
+  font-size: 14px;
+}
+
+/* window colors */
+
+window#waybar {
+  background-color: @background;
+  border-radius: 15px;
+  margin-top: 6px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+/* workspaces colors */
+
+#workspaces {
+  margin: 6px 6px 6px 6px;
+  border-radius: 18px;
+  background: @background;
+  transition: none;
+  padding-left: 6px;
+  padding-right: 0px;
+}
+
+#workspaces button {
+  transition: none;
+  color: @foreground;
+  background: transparent;
+  margin-right: 10px;
+}
+
+#workspaces button.persistent {
+  transition: none;
+  color: #aca1cf;
+  background: transparent;
+}
+
+#workspaces button.empty {
+  color: #e29eca;
+  font-size: 2px;
+  transition: none;
+  background: transparent;
+}
+
+#workspaces button.active {
+  transition: none;
+  color: #e6b99d;
+  background: transparent;
+  font-size: 4px;
+}
+
+/* spotify */
+
+#custom-spotify {
+  margin-top: 6px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: @color2;
+  color: @background;
+}
+
+/* cava */
+
+#custom-cava {
+  margin-top: 6px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* clock */
+
+#clock {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 8px;
+  margin-bottom: 6px;
+  border-radius: 18px;
+  transition: none;
+  font-weight: bold;
+  color: @background;
+  background: @color2;
+}
+
+/* language */
+
+#language {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: @background;
+  background: @color2;
+}
+
+/* memory */
+
+#memory {
+  margin: 6px 6px 6px 6px;
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  /* font-size: 14px; */
+  font-weight: bold;
+  transition: none;
+  color: @background;
+  background: @color2;
+}
+
+/* pulseaudio */
+
+#pulseaudio {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: none;
+  color: @background;
+  background: @color2;
+}
+
+/* bluetooth  */
+
+#bluetooth {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: none;
+  color: @background;
+  background: @color2;
+}
+
+/* battery */
+
+#battery {
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: @background;
+  background: @color2;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #161617;
+  background-color: @color6;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @color8;
+  color: @background;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: @color2;
+  }
+}
+
+/* tray */
+
+#tray {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  /* color: @background; */
+  background: @background;
+}
+
+/* unused modules */
+
+#audio {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 6px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: none;
+  color: @background;
+  background: @color7;
+}
+
+#custom-notification {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 8px;
+  margin-bottom: 6px;
+  border-radius: 15px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: @background;
+  background-color: @color14;
+}
+
+#cpu {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  padding-right: 10px;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: none;
+  color: #161617;
+  background: #ea83a5;
+}
+
+#custom-launcher {
+  font-size: 18px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  transition: none;
+  color: #92a2d5;
+  background: transparent;
+}
