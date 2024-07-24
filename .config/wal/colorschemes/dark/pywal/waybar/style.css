@@ -1,6 +1,6 @@
 /* import pywal colors */
 
-@import url("/home/jake/.cache/wal/colors-waybar.css");
+@import url("../../.cache/wal/colors-waybar.css");
 
 * {
   border: none;

@@ -17,7 +17,7 @@ save_shader() {
 save_shader # Saving the current shader
 
 if [ -z "$XDG_PICTURES_DIR" ]; then
-	XDG_PICTURES_DIR="/home/jake/Pictures"
+	XDG_PICTURES_DIR="$HOME/Pictures"
 fi
 
 scrDir=$(dirname "$(realpath "$0")")

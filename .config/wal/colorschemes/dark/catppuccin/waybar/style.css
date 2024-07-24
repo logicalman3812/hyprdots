@@ -1,6 +1,6 @@
 /* import pywal colors */
 
-@import url("/home/jake/.config/wal/colorschemes/dark/catppuccin/styles/mocha.css");
+@import url("../../.config/wal/colorschemes/dark/catppuccin/styles/mocha.css");
 
 * {
   border: none;
