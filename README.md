@@ -44,4 +44,9 @@
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>H</kbd>                                      | Move between grouped windows backward                |
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>L</kbd>                                      | Move between grouped windows forward                 |
 
+# TODO
+
+-   [ ] Finish themes (catppuccin, gruvbox, camellia, tokyonight).
+-   [ ] New rofi themes.
+
 </div>
