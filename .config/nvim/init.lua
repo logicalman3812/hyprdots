@@ -1,30 +1,22 @@
--- Basic
-require('core.plugins')
-require('core.mappings')
-require('core.colorscheme')
-require('core.configs')
+require("options")
+require("keymaps")
 
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Plugins
-require('plugins.neo-tree') 
-require('plugins.cmp')
-require('plugins.mason')
-require('plugins.telescope')
-require('plugins.null-ls')
-require('plugins.autopairs')
-require('plugins.autotags')
-require('plugins.bufferline')
-require('plugins.comments')
-require('plugins.dashboard')
-require('plugins.gitsigns')
-require('plugins.lualine')
-require('plugins.outline')
-require('plugins.toggleterm')
--- require('plugins.whichkey')
-require('plugins.colorizer')
-require('plugins.lsp-installer')
-require('plugins.luasnip')
-require('plugins.nvim-tree')
-require('plugins.neoscroll')
-require('plugins.gruvbox')
-require('plugins.transparent')
+require("lazy").setup("plugins", {
+	ui = {
+		border = "rounded",
+	},
+})
+require("colorscheme")

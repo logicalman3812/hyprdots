@@ -23,11 +23,11 @@ set_wallpaper() {
     wallpaper="$1"
     if [ -f "$wallpaper" ]; then
         swww img "$wallpaper" --transition-type grow --transition-fps 30 --transition-duration 2 --transition-pos 0.810,0.972 --transition-bezier 0.65,0,0.35,1 --transition-step 255 
-        wal -a 100 -i $wallpaper
+        wal -a 100 -i "$wallpaper"
         # python ~/.config/scripts/material_you/material_you.py --image $wallpaper
         python "$HOME/.config/scripts/pyhypr.py"
         pywalfox update
-        walogram -B -i $wallpaper
+        walogram -B -i "$wallpaper"
         pkill swaync && swaync &
     else
         echo "Error: Wallpaper file $wallpaper does not exist."
@@ -44,8 +44,9 @@ if [ ! -d "$wallpaper_dir" ]; then
     exit 1
 fi
 
-# Get the list of wallpapers from the directory
-wallpapers=("$wallpaper_dir"/*)
+# Get the list of wallpapers from the directory, sorted by modification date
+# Use ls to get files sorted by modification date, and map them to an array
+wallpapers=($(ls -t "$wallpaper_dir"/*))
 
 # Debugging output to check the list of wallpapers
 echo "Found wallpapers: ${wallpapers[@]}"

@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-vim.cmd("colorscheme lushwal")
+vim.cmd("colorscheme retrobox")
 lushwal.add_reload_hook({
   vim.cmd("LushwalCompile"),
 })

@@ -1,11 +1,39 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {
-      "python", "typescript", "javascript", "lua"
-  },
+return {
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	config = function()
+		local configs = require("nvim-treesitter.configs")
 
-  sync_install = false,
-  auto_install = true,
-  highlight = {
-    enable = true,
-  },
+		configs.setup({
+			ensure_installed = {
+				"bash",
+				"html",
+				"json",
+				"jsonc",
+				"lua",
+				"markdown",
+				"markdown_inline",
+				"python",
+				"regex",
+				"yaml",
+				"hyprlang",
+				"rasi",
+			},
+			auto_install = true,
+			highlight = { enable = true },
+			indent = { enable = true },
+			context_commentstring = {
+				enable = true,
+				enable_autocmd = false,
+			},
+
+			vim.filetype.add({
+				extension = { rasi = "rasi" },
+				pattern = {
+					[".*/waybar/config"] = "jsonc",
+					[".*/hypr/.*%.conf"] = "hyprlang",
+				},
+			}),
+		})
+	end,
 }

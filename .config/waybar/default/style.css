@@ -9,6 +9,21 @@
   font-size: 14px;
 }
 
+
+tooltip {
+  background: @background;
+  color: @color6;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @color6;
+}
+
+tooltip label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 /* window colors */
 
 window#waybar {

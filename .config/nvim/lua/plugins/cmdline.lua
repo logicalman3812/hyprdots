@@ -1,4 +1,7 @@
-require('fine-cmdline').setup({
+return {
+  {
+    "VonHeikemen/fine-cmdline.nvim",
+    opts = {
       cmdline = {
         enable_keymaps = true,
         smart_history = true,
@@ -31,5 +34,28 @@ require('fine-cmdline').setup({
         end
       }
     },
+    config = function(_, opts)
+      require('fine-cmdline').setup(opts)
+    end,
+  },
+  {
+    "akinsho/bufferline.nvim",
+    opts = {
+      options = {
+        offsets = {
+          {
+            filetype = "NvimTree",
+            text = "File Explorer",
+            text_align = "center",
+            highlight = "Directory",
+            separator = true,
+          },
+        },
+      },
+    },
+    config = function(_, opts)
+      require("bufferline").setup(opts)
+    end,
+  }
 }
-})
+

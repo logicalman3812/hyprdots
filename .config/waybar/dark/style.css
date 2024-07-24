@@ -1,0 +1,156 @@
+* {
+  border: none;
+  border-radius: 14px;
+  font-family: "SF Pro Text";
+  font-size: 14px;
+}
+
+/* Общие настройки для всех виджетов */
+.widget {
+  margin: 3px;
+  padding: 10px;
+  border-radius: 14px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: black;
+  border: 3px solid white;
+}
+
+/* window colors */
+window#waybar {
+  background: transparent;
+  border-radius: 14px;
+  margin-top: 1px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 18px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+/* workspaces colors */
+#workspaces {
+  border-radius: 14px;
+  background: black;
+  color: white;
+  padding-left: 6px;
+  padding-right: 0px;
+  border: 3px solid white;
+}
+
+#workspaces button {
+  transition: none;
+  color: @foreground;
+  background: transparent;
+  margin-right: 5px;
+}
+
+#workspaces button.persistent {
+  transition: none;
+  color: #aca1cf;
+  background: transparent;
+}
+
+#workspaces button.empty {
+  color: #e29eca;
+  transition: none;
+  background: transparent;
+}
+
+#workspaces button.active {
+  transition: none;
+  color: #e6b99d;
+  background: transparent;
+}
+
+#custom-spotify,
+#custom-cava,
+#clock,
+#language,
+#memory,
+#pulseaudio,
+#bluetooth,
+#battery,
+#tray,
+#audio,
+#custom-notification,
+#cpu,
+#custom-launcher {
+  margin: 3px;
+  padding: 10px;
+  border-radius: 14px;
+  transition: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: black;
+  border: 3px solid white;
+}
+
+#custom-spotify {
+  border-radius: 14px;
+  background-color: black;
+}
+
+#custom-cava {
+  color: white;
+}
+
+#clock {
+  color: white;
+}
+
+#language {
+  color: white;
+}
+
+#memory {
+  color: white;
+}
+
+#pulseaudio {
+  color: white;
+}
+
+#bluetooth {
+  color: white;
+}
+
+#battery {
+  color: white;
+}
+
+#tray {
+  color: white;
+}
+
+#audio {
+  color: @background;
+  background: @color7;
+}
+
+#custom-notification {
+  color: @background;
+  background-color: @color14;
+}
+
+#cpu {
+  color: white;
+}
+
+#custom-launcher {
+  font-size: 18px;
+  color: #92a2d5;
+  background: transparent;
+  padding-right: 5px;
+}

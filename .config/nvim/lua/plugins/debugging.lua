@@ -13,6 +13,14 @@ return {
 		local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
 		require("dap-python").setup(path)
 
+    table.insert(dap.configurations.python, {
+      type = 'python',
+      request = 'launch',
+      name = 'Django',
+      program = vim.fn.getcwd() .. '/manage.py',
+      args = {'runserver', '--noreload'},
+    })
+
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
 		end
