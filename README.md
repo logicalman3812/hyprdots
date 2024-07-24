@@ -2,10 +2,11 @@
 
 <!-- ![image](https://github.com/logicalman3812/hyprdots/assets/85504304/f7b4c74a-7726-4aa8-a06d-008991ba73ca) -->
 
-<!-- <details> -->
-<!--     ![image](https://github.com/user-attachments/assets/487f875d-a0f8-4352-9662-9b5fd9518417) -->
-<!--     ![image](https://github.com/user-attachments/assets/0b74de6c-c460-49da-9cfd-b5e97bc7cd95) -->
-<!-- </details> -->
+<details>
+  <summary>Preview</summary>
+  ![Screenshot 1](https://github.com/logicalman3812/hyprdots/blob/main/assets/screenshot.png)
+  ![Screenshot 2](https://github.com/logicalman3812/hyprdots/blob/main/assets/screenshot_1.png)
+</details>
 
 ## Keybindings
 
