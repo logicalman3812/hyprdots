@@ -27,7 +27,7 @@
 | <kbd>Super</kbd> + <kbd>F</kbd>                                                        | Launch web browser (floorp)                          |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>                                    | Launch system monitor (htop/btop or fallback to top) |
 | <kbd>Super</kbd> + <kbd>A</kbd>                                                        | Launch application launcher (rofi)                   |
-| <kbd>F10</kbd>                                                                         | Toggle audio mute                                    |
+| <kbd>F10</kbd>                                                                         | Toggle audio mute/unmute                             |
 | <kbd>F11</kbd>                                                                         | Decrease volume                                      |
 | <kbd>F12</kbd>                                                                         | Increase volume                                      |
 | <kbd>Super</kbd> + <kbd>P</kbd>                                                        | Partial screenshot capture (frozen screen)           |
