@@ -4,8 +4,10 @@
 
 <details>
   <summary>Screenshots</summary>
+  
   ![Screenshot 1](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot.png)
   ![Screenshot 2](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot_1.png)
+
 </details>
 
 ## Keybindings
