@@ -121,8 +121,8 @@
 
   "bluetooth": {
     "format": "<span font='12'>󰂯</span>",
-    "format-off": "<span font='13'>󰂲 Off</span>",
-    "format-disabled": "<span font='13'>󰂲 Off</span>",
+    "format-off": "<span font='13'>󰂲</span>",
+    "format-disabled": "<span font='13'>󰂲</span>",
     "format-connected": "<span size='large' rise='-1000'>󰂯</span>",
     "format-connected-battery": "<span font='12'>{icon}</span>   {device_battery_percentage}%",
     "format-icons": ["󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"],
