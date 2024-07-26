@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 ![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
@@ -29,14 +30,47 @@
     ```
 
 ## Screenshots 
+=======
+<!-- ![image](https://github.com/logicalman3812/hyprdots/assets/85504304/f7b4c74a-7726-4aa8-a06d-008991ba73ca) -->
+>>>>>>> 79e882fc2666615658a69990509d39e2dd2b098c
 
-<details>
-  <summary>Screenshots</summary>
-  
-  ![Screenshot 1](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot.png)
-  ![Screenshot 2](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot_1.png)
+<div align="center">
 
-</details>
+![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
+
+<br>
+
+  <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="#screenshots"><kbd> <br> Screenshots <br> </kbd></a>&ensp;&ensp;
+  <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
+
+</div><br><br>
+
+## Installation
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/logicalman3812/hyprdots.git
+    cd hyprdots
+    ```
+
+2. **Move files to their respective locations**
+
+    ```bash
+    mv .config ~/.config
+    ```
+
+    ```bash
+    mv .zshrc .tmux.conf ~/
+    ```
+
+## Screenshots 
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot.png" alt="Screenshot 1" style="width: 45%; max-width: 45%;">
+  <img src="https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot_1.png" alt="Screenshot 2" style="width: 45%; max-width: 45%;">
+</div>
 
 ## Keybindings
 
