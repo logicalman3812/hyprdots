@@ -1,6 +1,34 @@
-## Screenshots 
+<div align="center">
 
-<!-- ![image](https://github.com/logicalman3812/hyprdots/assets/85504304/f7b4c74a-7726-4aa8-a06d-008991ba73ca) -->
+![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
+
+<br>
+
+  <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
+
+</div><br><br>
+
+## Installation
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/logicalman3812/hyprdots.git
+    cd hyprdots
+    ```
+
+2. **Move files to their respective locations**
+
+    ```bash
+    mv .config ~/
+    ```
+
+    ```bash
+    mv .zshrc .tmux.conf ~/
+    ```
+
+## Screenshots 
 
 <details>
   <summary>Screenshots</summary>
@@ -53,4 +81,5 @@
 
 -   [ ] Finish themes (catppuccin, gruvbox, camellia, tokyonight).
 -   [ ] New rofi themes.
+
 
