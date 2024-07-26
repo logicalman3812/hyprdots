@@ -33,13 +33,10 @@
 
 ## Screenshots 
 
-<details>
-  <summary>Screenshots</summary>
-  
-  ![Screenshot 1](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot.png)
-  ![Screenshot 2](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot_1.png)
-
-</details>
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot.png" alt="Screenshot 1" style="width: 45%; max-width: 45%;">
+  <img src="https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/screenshot_1.png" alt="Screenshot 2" style="width: 45%; max-width: 45%;">
+</div>
 
 ## Keybindings
 
