@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
 
 ![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
