@@ -21,37 +21,6 @@
 2. **Move files to their respective locations**
 
     ```bash
-    mv .config ~/
-    ```
-
-    ```bash
-    mv .zshrc .tmux.conf ~/
-    ```
-
-## Screenshots 
-
-<div align="center">
-
-<br>
-
-  <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
-  <a href="#screenshots"><kbd> <br> Screenshots <br> </kbd></a>&ensp;&ensp;
-  <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
-
-</div><br><br>
-
-## Installation
-
-1. **Clone the Repository:**
-
-    ```bash
-    git clone https://github.com/logicalman3812/hyprdots.git
-    cd hyprdots
-    ```
-
-2. **Move files to their respective locations**
-
-    ```bash
     mv .config ~/.config
     ```
 
