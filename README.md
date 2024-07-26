@@ -1,6 +1,24 @@
-## Screenshots 
+
 
 <!-- ![image](https://github.com/logicalman3812/hyprdots/assets/85504304/f7b4c74a-7726-4aa8-a06d-008991ba73ca) -->
+
+
+<div align="center">
+
+![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
+
+<br>
+
+  <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
+
+</div><br><br>
+
+## Installation
+
+soon
+
+## Screenshots 
 
 <details>
   <summary>Screenshots</summary>
