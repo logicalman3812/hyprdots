@@ -29,13 +29,8 @@
     ```
 
 ## Screenshots 
-=======
-<!-- ![image](https://github.com/logicalman3812/hyprdots/assets/85504304/f7b4c74a-7726-4aa8-a06d-008991ba73ca) -->
->>>>>>> 79e882fc2666615658a69990509d39e2dd2b098c
 
 <div align="center">
-
-![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
 
 <br>
 
