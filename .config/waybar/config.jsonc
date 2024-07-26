@@ -35,7 +35,7 @@
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "urgent": "<span font='12'></span>",
+      "urgent": "<span font='12'>󱨇</span>",
       "active": "<span font='12'>󰮯</span>",
       "default": "<span font='12'>󰊠</span>",
       "sort-by-number": true,
