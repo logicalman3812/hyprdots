@@ -1,10 +1,11 @@
 <div align="center">
 
-![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png)
+<!--- ![banner](https://raw.githubusercontent.com/logicalman3812/hyprdots/main/assets/banner.png) --->
 
 <br>
 
   <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+  <a href="#screenshots"><kbd> <br> Screenshots <br> </kbd></a>&ensp;&ensp;
   <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
 
 </div><br><br>
