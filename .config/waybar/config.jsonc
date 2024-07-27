@@ -30,8 +30,8 @@
     "format": "{}°C",
     "tooltip": false,
     "interval": 3600,
-    // "exec": "wttrbar --location Russia --custom-indicator '{ICON} {temp_C}'",
-    "exec": "$HOME/weather.sh",
+    "exec": "wttrbar --location Russia --custom-indicator '{ICON} {temp_C}'",
+    // "exec": "$HOME/weather.sh",
     "return-type": "json",
   },
 
