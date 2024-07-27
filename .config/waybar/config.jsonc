@@ -2,7 +2,7 @@
   "layer": "top",
   "width": 1500,
   "margin-top": 10,
-  "margin-bottom": 0,
+  "margin-bottom": 5,
   "gtk-layer-shell": true,
   "reload_style_on_change": true,
   "fixed-center": true,
@@ -10,10 +10,7 @@
   // Modules layout
 
   "modules-left": ["hyprland/workspaces", "custom/spotify"],
-  "modules-center": [
-    "custom/weather",
-    "clock"
-  ],
+  "modules-center": ["custom/weather", "clock"],
   "modules-right": [
     "hyprland/language",
     "memory",
@@ -26,10 +23,7 @@
 
   "group/audio": {
     "orientation": "horizontal",
-    "modules": [
-      "pulseaudio",
-      "bluetooth",
-    ]
+    "modules": ["pulseaudio", "bluetooth"],
   },
 
   "custom/weather": {
@@ -52,6 +46,16 @@
       "active": "<span font='13' rise='-1000'>󰝬</span>",
       "default": "<span font='14'>󰝭</span>",
       "sort-by-number": true,
+      // "1": "一",
+      // "2": "二",
+      // "3": "三",
+      // "4": "四",
+      // "5": "五",
+      // "6": "六",
+      // "7": "七",
+      // "8": "八",
+      // "9": "九",
+      // "10": "〇",
     },
   },
 
@@ -151,7 +155,9 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
     "on-click": "blueman-manager",
   },
+
   // battery
+
   "battery": {
     "states": {
       "good": 95,
@@ -165,17 +171,23 @@
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "tooltip-format": "󰂁 {capacity}%\n{time}",
   },
+
   // cava
+
   "custom/cava": {
     "exec": "$HOME/.config/waybar/modules/waybarcava.sh",
     "format": "{}",
   },
+
   // tray
+
   "tray": {
     "icon-size": 14,
     "spacing": 10,
   },
+
   // notification
+
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
@@ -196,14 +208,18 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
   },
+
   // network
+
   "network": {
     "tooltip": false,
     "format-wifi": "   {bandwidthDownBits}",
     "format-ethernet": "",
     "interval": 30,
   },
+
   // backlight
+
   "backlight": {
     "tooltip": false,
     "format": " {}%",
@@ -211,37 +227,12 @@
     "on-scroll-up": "light -A 5",
     "on-scroll-down": "light -U 5",
   },
-  // media
-  "custom/media": {
-    "interval": 30,
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 20,
-    "format-icons": {
-      "spotify": " ",
-      "default": " ",
-    },
-    "escape": true,
-    "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-    "on-click": "playerctl play-pause",
-  },
+
   // launcher
+
   "custom/launcher": {
     "format": " ",
-    "on-click": "$HOME/.config/rofi/launchers/type-6/launcher.sh",
+    "on-click": "$HOME/.config/rofi//launcher.sh",
     "on-click-right": "killall rofi",
-  },
-  // power
-  "custom/power": {
-    "format": " ",
-    "on-click": "bash ~/.config/rofi/leave/leave.sh",
-  },
-  // updates
-  "custom/updates": {
-    "format": "{} Update(s)",
-    "exec": "checkupdates | wc -l",
-    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-    "interval": 15,
-    "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' ",
   },
 }
