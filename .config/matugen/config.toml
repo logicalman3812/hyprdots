@@ -1,0 +1,39 @@
+[config]
+reload_apps = true 
+set_wallpaper = false 
+wallpaper_tool = 'Swww'
+prefix = '@'
+swww_options = [
+    "--transition-step",
+    "10",
+    "--transition-fps",
+    "90",
+    "--transition-type",
+    "random",
+    "--transition-duration",
+    "1.0",
+]
+
+[config.reload_apps_list]
+waybar = false 
+kitty = true
+
+[templates.colors]
+input_path = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/matugen/colorschemes/colors.css"
+
+[templates.colors-hyprland]
+input_path = "~/.config/matugen/templates/colors-hyprland.conf"
+output_path = "~/.config/matugen/colorschemes/colors-hyprland.conf"
+
+[templates.colors-waybar]
+input_path = "~/.config/matugen/templates/colors-waybar.css"
+output_path = "~/.config/matugen/colorschemes/colors-waybar.css"
+
+# [templates.colors-kitty]
+# input_path = "~/.config/matugen/templates/colors-kitty.conf"
+# output_path = "~/.config/matugen/colorschemes/colors-kitty.conf"
+
+[templates.colors-rofi]
+input_path = "~/.config/matugen/templates/colors-rofi.rasi"
+output_path = "~/.config/matugen/colorschemes/colors-rofi.rasi"
