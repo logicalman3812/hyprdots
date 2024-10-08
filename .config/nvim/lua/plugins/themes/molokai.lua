@@ -1,0 +1,3 @@
+return {
+  "UtkarshVerma/molokai.nvim"
+}

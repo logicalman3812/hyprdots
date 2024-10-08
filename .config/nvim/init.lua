@@ -1,22 +1,22 @@
-require("options")
-require("keymaps")
+require("user.colorscheme")
+require("user.keymaps")
+require("user.options")
+require("config.lazy")
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
-end
-vim.opt.rtp:prepend(lazypath)
+vim.o.guicursor = table.concat({
+	"n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+	"i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+	"r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+}, ",")
 
-require("lazy").setup("plugins", {
-	ui = {
-		border = "rounded",
-	},
-})
-require("colorscheme")
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function() end
+
+-- vim.opt.guicursor = {
+-- 	"n:blinkon0",
+-- 	"i:block",
+-- 	"v:blinkon0",
+-- 	"c:block",
+-- }
+
+-- vim.cmd("TransparentToggle")
+vim.cmd.colorscheme("bamboo")
