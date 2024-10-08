@@ -10,7 +10,10 @@
   // Modules layout
 
   "modules-left": ["hyprland/workspaces", "custom/spotify"],
-  "modules-center": ["custom/weather", "clock"],
+  "modules-center": [
+    // "custom/weather",
+    "clock",
+  ],
   "modules-right": [
     "hyprland/language",
     "memory",
@@ -30,8 +33,8 @@
     "format": "{}°C",
     "tooltip": false,
     "interval": 3600,
-    "exec": "wttrbar --location Russia --custom-indicator '{ICON} {temp_C}'",
-    // "exec": "$HOME/weather.sh",
+    // "exec": "wttrbar --location Russia --custom-indicator '{ICON} {temp_C}'",
+    "exec": "$HOME/weather.sh",
     "return-type": "json",
   },
 
@@ -42,10 +45,22 @@
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "urgent": "<span font='12'>󱨇</span>",
-      "active": "<span font='13' rise='-1000'>󰝬</span>",
-      "default": "<span font='14'>󰝭</span>",
-      "sort-by-number": true,
+      // "urgent": "<span font='12'>󰂞</span>",
+      //  "active" : "<span font='12'>󱨇</span>",
+      //  "default":"<span font='12'></span>",
+      // "active": "<span font='12'>󰥱</span>",
+      // "default": "<span font='12'>󰥲</span>",
+      // "urgent": "<span font='12'>󱨇</span>",
+
+      "active": "<span font='12'>󰮯</span>",
+      "default": "<span font='12'>󰊠</span>",
+      // "urgent": "<span font='14'>󱨇</span>",
+
+      // "active": "<span font='14'>󰝬</span>",
+      // "default": "<span font='14'>󰝭</span>",
+
+      // "sort-by-number": true,
+
       // "1": "一",
       // "2": "二",
       // "3": "三",
@@ -62,28 +77,44 @@
   // spotify
 
   "custom/spotify": {
-    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-    "format": "<span> {icon}  {}</span>",
-    "format-icons": {
-      "Playing": " ",
-      "Paused": " ",
-    },
-    "max-length": 50,
+    "exec": "python $HOME/.config/waybar/modules/mediaplayer.py --player spotify",
+    "format": " {}",
+    "rotate": 0,
+    "return-type": "json",
     "on-click": "playerctl previous --player spotify",
     "on-click-right": "playerctl next --player spotify",
     "on-click-middle": "playerctl play-pause --player spotify",
-    "on-scroll-up": "playerctl volume .05-",
-    "on-scroll-down": "playerctl volume .05+",
-    "return-type": "json",
+    "on-scroll-up": "volumecontrol.sh -p spotify i",
+    "on-scroll-down": "volumecontrol.sh -p spotify d",
+    "max-length": 50,
     "escape": true,
-    "tooltip-format": " {icon}  {}",
+    "tooltip-format": " {}",
   },
+
+// "custom/spotify": {
+//     "exec": "playerctl -p spotify,cmus metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+//     "format": "<span> {icon}  {}</span>",
+//     "format-icons": {
+//       "Playing": " ",
+//       "Paused": " ",
+//     },
+//     "max-length": 50,
+//     "on-click": "playerctl previous --player spotify,cmus",
+//     "on-click-right": "playerctl next --player spotify,cmus",
+//     "on-click-middle": "playerctl play-pause --player spotify,cmus",
+//     "on-scroll-up": "playerctl volume .05-",
+//     "on-scroll-down": "playerctl volume .05+",
+//     "return-type": "json",
+//     "escape": true,
+//     "tooltip-format": " {icon}  {}",
+//   },
 
   // clock
 
   "clock": {
     "tooltip": true,
     "interval": 60,
+    // "timezone": "Europe/Helsinki",
     "format": "<span font='12'>󱑆</span>  {:%I:%M %p}",
     "format-alt": "<span font='12'>󰃭</span>  {:%a %d, <span font='12'>󱑆</span>  %I:%M %p}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -113,7 +144,7 @@
     "tooltip-format": "󰍛  {used}GiB",
   },
 
-  // pulseaudio
+  // pulseaudio / audio
 
   "pulseaudio": {
     "format": "{icon}   {volume}%",

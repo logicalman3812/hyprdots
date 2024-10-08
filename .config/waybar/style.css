@@ -1,22 +1,23 @@
-/* import pywal colors */
+/* matugen colors */
 
-@import url("../../.cache/wal/colors-waybar.css");
+@import url("../../.config/matugen/colorschemes/colors-waybar.css");
+@define-color main_color @primary_fixed_dim;
 
 * {
   border: none;
   border-radius: 18px;
-  font-family: "SF Pro Text";
+  /* font-family: "SF Pro Text"; */
+  font-family: "SF Pro Text", "JetBrainsMono Nerd Font";
   font-size: 14px;
 }
 
-
 tooltip {
   background: @background;
-  color: @color6;
+  color: @main_color;
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
-  border-color: @color6;
+  border-color: @main_color;
 }
 
 tooltip label {
@@ -27,7 +28,8 @@ tooltip label {
 /* window colors */
 
 window#waybar {
-  background: alpha(@background, 0.3);
+  background: alpha(@background, 0.5);
+  /* background: @background; */
   border-radius: 20px;
   margin-top: 6px;
 }
@@ -43,17 +45,17 @@ window#waybar.hidden {
   transition: none;
   background: alpha(@background, 0.1);
   border-radius: 10px;
-  color: lighter(@color6);
+  color: @main_color;
 }
 
 /* workspaces colors */
 
 #workspaces {
-  margin: 6px 6px 6px 6px;
+  margin: 6px 0px 6px 6px;
   border-radius: 20px;
   transition: none;
   padding-left: 6px;
-  padding-right: 0px;
+  padding-right: 6px;
 }
 
 #workspaces button {
@@ -77,9 +79,13 @@ window#waybar.hidden {
 
 #workspaces button.active {
   transition: none;
-  color: #e6b99d;
+  color: @primary_fixed_dim;
   background: transparent;
-  font-size: 4px;
+}
+
+#workspaces button.urgent {
+  transition: none;
+  color: @on_error_container;
 }
 
 /* spotify */
@@ -88,14 +94,12 @@ window#waybar.hidden {
   margin-top: 6px;
   margin-left: 0px;
   margin-right: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 20px;
-  transition: none;
-  font-size: 14px;
+  border-radius: 18px;
   font-weight: bold;
-  background-color: @color6;
+  background-color: @main_color;
   color: @background;
 }
 
@@ -111,7 +115,7 @@ window#waybar.hidden {
   transition: none;
   font-weight: bold;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 /* cava */
@@ -126,7 +130,7 @@ window#waybar.hidden {
   transition: none;
   font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: @main_color;
 }
 
 /* clock */
@@ -142,7 +146,7 @@ window#waybar.hidden {
   transition: none;
   font-weight: bold;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 /* language */
@@ -159,7 +163,7 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 /* memory */
@@ -177,7 +181,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 /* pulseaudio */
@@ -194,7 +198,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 /* bluetooth  */
@@ -211,7 +215,7 @@ window#waybar.hidden {
   font-weight: bold;
   transition: none;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 /* battery */
@@ -228,17 +232,17 @@ window#waybar.hidden {
   font-size: 14px;
   font-weight: bold;
   color: @background;
-  background: @color6;
+  background: @main_color;
 }
 
 #battery.charging,
 #battery.plugged {
   color: #161617;
-  background-color: @color6;
+  background-color: @main_color;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @color8;
+  background-color: @on_primary;
   color: @background;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -249,7 +253,7 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    color: @color6;
+    color: @main_color;
   }
 }
 
@@ -257,7 +261,7 @@ window#waybar.hidden {
 
 #tray {
   margin-top: 6px;
-  margin-left: 8px;
+  margin-left: 0px;
   margin-right: 10px;
   margin-bottom: 6px;
   padding-left: 10px;
