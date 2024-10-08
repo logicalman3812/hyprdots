@@ -22,7 +22,7 @@
 2. **Move files to their respective locations**
 
     ```bash
-    mv .config ~/.config
+    mv .config ~/
     ```
 
     ```bash
